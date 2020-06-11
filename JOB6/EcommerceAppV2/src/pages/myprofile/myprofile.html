@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-title>My Profile</ion-title>
+        </ion-col>
+        <ion-col col-2 text-right >
+          <button ion-button clear icon-only (click)="showInputForm()" style="padding: 0px !important" >
+            <ion-icon name='settings' color="primary">
+            </ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>{{user.name}}</h2>
+  <p>Email : <i>{{user.email}}</i>
+  </p><button ion-button size="large" type="button" (click)="logout()" block>Logout</button>
+</ion-content>

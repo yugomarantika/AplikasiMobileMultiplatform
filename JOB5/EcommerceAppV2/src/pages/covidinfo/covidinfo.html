@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Covid-19 Info</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card style="border-radius: 15px;">
+    <ion-card-header style="background: #488aff;">Kasus di Indonesia</ion-card-header>
+    <ion-card-content >
+      <ion-list>
+        <ion-item>
+          <p>Terkonfirmasi : {{ covidId.confirmed | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Kasus Aktif : {{ covidId.activeCare | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Sembuh : {{ covidId.recovered | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Meninggal : {{ covidId.deaths | number : fractionSize }}</p>
+        </ion-item>
+      </ion-list>
+      Last Update: {{ covidId.metadata}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card style="border-radius: 15px;">
+    <ion-card-header style="background: #488aff;">Kasus di Dunia</ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <p>Terkonfirmasi : {{ covidWorld.confirmed | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Kasus Aktif : {{ covidWorld.activeCare | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Sembuh : {{ covidWorld.recovered | number : fractionSize }}</p>
+        </ion-item>
+        <ion-item>
+          <p>Meninggal : {{ covidWorld.deaths | number : fractionSize }}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

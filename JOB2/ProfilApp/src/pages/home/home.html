@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input type="text" placeholder="Nama" [(ngModel)]="recvData.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" placeholder="Nim" [(ngModel)]="model.quote"></ion-input>
+  </ion-item>
+  
+
+<p>
+  <button ion-button (click) = "openAboutPage()" block> Post Status </button>
+</p>
+</ion-content>
